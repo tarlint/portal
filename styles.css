@@ -282,6 +282,14 @@ main {
     border-radius: var(--border-radius);
     transition: var(--transition);
     background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-link i {
+    width: 16px;
+    text-align: center;
 }
 
 .phone-link:hover {
@@ -295,6 +303,13 @@ main {
     background-color: var(--secondary-color);
     color: var(--white);
     border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.subdomain-link:hover {
+    background-color: var(--light-teal);
+    color: var(--primary-color);
+    border-color: var(--light-teal);
     transform: translateY(-2px);
 }
 
