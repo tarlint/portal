@@ -111,34 +111,33 @@
             const mainContent = document.getElementById('main-content');
             const logoVideo = document.getElementById('logo-video');
 
-            // When video ends, fade out loader and fade in main content
+            // When video ends, trigger door opening effect
             logoVideo.addEventListener('ended', function() {
-                // Fade out loader
-                loaderOverlay.style.opacity = '0';
-                loaderOverlay.style.transition = 'opacity 0.5s ease-out';
+                // Show main content behind the door
+                mainContent.classList.remove('hidden');
+                mainContent.style.opacity = '1';
+                mainContent.style.display = 'block';
 
+                // Start door opening animation
+                loaderOverlay.classList.add('door-opening');
+
+                // Remove loader after animation completes
                 setTimeout(function() {
                     loaderOverlay.style.display = 'none';
-
-                    // Show and fade in main content
-                    mainContent.classList.remove('hidden');
-                    mainContent.style.opacity = '0';
-                    mainContent.style.display = 'block';
-
-                    // Trigger fade in
-                    setTimeout(function() {
-                        mainContent.style.opacity = '1';
-                        mainContent.style.transition = 'opacity 1s ease-in';
-                    }, 50);
-                }, 500);
+                }, 1500); // Match animation duration
             });
 
             // Fallback: Show content after 5 seconds if video doesn't load
             setTimeout(function() {
-                if (loaderOverlay.style.display !== 'none') {
-                    loaderOverlay.style.display = 'none';
+                if (!loaderOverlay.classList.contains('door-opening') && loaderOverlay.style.display !== 'none') {
                     mainContent.classList.remove('hidden');
                     mainContent.style.opacity = '1';
+                    mainContent.style.display = 'block';
+                    loaderOverlay.classList.add('door-opening');
+
+                    setTimeout(function() {
+                        loaderOverlay.style.display = 'none';
+                    }, 1500);
                 }
             }, 5000);
         });
