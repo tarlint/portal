@@ -609,6 +609,26 @@ footer {
         gap: 1.5rem;
     }
 
+    .service-contact-boxes {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 100%;
+    }
+
+    .service-box {
+        padding: 1.5rem;
+    }
+
+    .service-box h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-link {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+
     .services h2,
     .team-section h2 {
         font-size: 2rem;
@@ -649,9 +669,23 @@ footer {
         font-size: 1.1rem;
     }
 
-    .phone-number {
-        font-size: 1.3rem;
-        padding: 0.75rem 1rem;
+    .service-box {
+        padding: 1rem;
+    }
+
+    .service-box h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact-link {
+        font-size: 0.85rem;
+        padding: 0.6rem;
+        gap: 0.4rem;
+    }
+
+    .contact-link i {
+        width: 14px;
+        font-size: 0.85rem;
     }
 
     .footer-content {
