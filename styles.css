@@ -51,17 +51,10 @@ body {
 
 @keyframes doorOpen {
     0% {
-        transform: scaleX(1);
-        transform-origin: center;
-    }
-    50% {
-        transform: scaleX(0.02);
-        transform-origin: center;
+        transform: translateX(0);
     }
     100% {
-        transform: scaleX(0);
-        transform-origin: center;
-        opacity: 0;
+        transform: translateX(-100%);
     }
 }
 
