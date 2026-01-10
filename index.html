@@ -7,10 +7,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Logo Loader Overlay -->
+    <div id="loader-overlay" class="loader-overlay">
+        <div class="loader-content">
+            <video id="logo-video" autoplay muted playsinline>
+                <source src="logo-animation.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Main Content (initially hidden) -->
+    <div id="main-content" class="main-content hidden">
     <header>
         <nav class="main-nav">
             <div class="nav-container">
                 <div class="logo">
+                    <img src="logo-static.png" alt="New Paths for Health" class="logo-image">
                     <h1>New Paths for Health</h1>
                 </div>
                 <ul class="nav-links">
@@ -87,5 +100,46 @@
             </div>
         </div>
     </footer>
+    </div>
+
+    <script>
+        // Logo loader functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const loaderOverlay = document.getElementById('loader-overlay');
+            const mainContent = document.getElementById('main-content');
+            const logoVideo = document.getElementById('logo-video');
+
+            // When video ends, fade out loader and fade in main content
+            logoVideo.addEventListener('ended', function() {
+                // Fade out loader
+                loaderOverlay.style.opacity = '0';
+                loaderOverlay.style.transition = 'opacity 0.5s ease-out';
+
+                setTimeout(function() {
+                    loaderOverlay.style.display = 'none';
+
+                    // Show and fade in main content
+                    mainContent.classList.remove('hidden');
+                    mainContent.style.opacity = '0';
+                    mainContent.style.display = 'block';
+
+                    // Trigger fade in
+                    setTimeout(function() {
+                        mainContent.style.opacity = '1';
+                        mainContent.style.transition = 'opacity 1s ease-in';
+                    }, 50);
+                }, 500);
+            });
+
+            // Fallback: Show content after 5 seconds if video doesn't load
+            setTimeout(function() {
+                if (loaderOverlay.style.display !== 'none') {
+                    loaderOverlay.style.display = 'none';
+                    mainContent.classList.remove('hidden');
+                    mainContent.style.opacity = '1';
+                }
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
