@@ -399,6 +399,9 @@ main {
     padding: 3rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .service-header {
@@ -448,6 +451,7 @@ main {
     font-weight: 600;
     font-size: 1.1rem;
     transition: var(--transition);
+    margin-top: auto;
 }
 
 .service-link:hover {
