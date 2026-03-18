@@ -674,7 +674,13 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 140px;
+    background-color: #081d31;
+    border-color: #081d31;
+}
+
+.practitioner-link:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 footer {
