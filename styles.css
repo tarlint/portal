@@ -14,6 +14,9 @@
     --medium-teal: #5B9BA8;
     --light-teal: #9BCAD3;
     --very-light-blue: #D8E8EB;
+    --link-color: #2D728F;
+    --link-hover: #5B9BA8;
+    --link-underline: rgba(45, 114, 143, 0.25);
 }
 
 * {
@@ -71,10 +74,11 @@ header {
     gap: 1rem;
     text-decoration: none;
     transition: var(--transition);
+    color: var(--link-color);
 }
 
 .logo-link:hover {
-    opacity: 0.8;
+    color: var(--link-hover);
 }
 
 .logo-image {
@@ -96,14 +100,14 @@ header {
 
 .nav-link {
     text-decoration: none;
-    color: var(--text-primary);
+    color: var(--link-color);
     font-weight: 500;
     transition: var(--transition);
     position: relative;
 }
 
 .nav-link:hover {
-    color: var(--primary-color);
+    color: var(--link-hover);
 }
 
 .nav-link.active {
@@ -468,8 +472,10 @@ main {
 
 .service-link {
     display: inline-block;
-    color: var(--secondary-color);
-    text-decoration: none;
+    color: var(--link-color);
+    text-decoration: underline;
+    text-decoration-color: var(--link-underline);
+    text-underline-offset: 0.2em;
     font-weight: 600;
     font-size: 1.1rem;
     transition: var(--transition);
@@ -477,8 +483,8 @@ main {
 }
 
 .service-link:hover {
-    color: var(--primary-color);
-    text-decoration: underline;
+    color: var(--link-hover);
+    text-decoration-color: var(--link-hover);
 }
 
 .service-card {
@@ -696,13 +702,16 @@ footer {
 }
 
 .footer-section a {
-    color: var(--white);
-    text-decoration: none;
+    color: var(--accent-color);
+    text-decoration: underline;
+    text-decoration-color: rgba(155, 202, 211, 0.45);
+    text-underline-offset: 0.2em;
     transition: var(--transition);
 }
 
 .footer-section a:hover {
-    color: var(--accent-color);
+    color: var(--white);
+    text-decoration-color: var(--white);
 }
 
 @media (max-width: 768px) {
