@@ -175,6 +175,7 @@ main {
 .hero-brand {
     font-size: 1em;
     font-weight: 800;
+    white-space: nowrap;
 }
 
 .hero-subtitle {
@@ -597,6 +598,10 @@ footer {
         font-size: 2.5rem;
     }
 
+    .hero-brand {
+        font-size: 0.9em;
+    }
+
     .hero-subtitle {
         font-size: 1.2rem;
     }
@@ -676,6 +681,10 @@ footer {
 @media (max-width: 480px) {
     .hero-content h1 {
         font-size: 2rem;
+    }
+
+    .hero-brand {
+        font-size: 0.85em;
     }
 
     .hero-subtitle {
