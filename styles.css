@@ -603,6 +603,14 @@ main {
     transform: translateY(-5px);
 }
 
+.practitioner-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.9rem;
+}
+
 .practitioner-photo {
     width: 120px;
     height: 120px;
@@ -610,7 +618,7 @@ main {
     object-position: center top;
     border-radius: 50%;
     display: block;
-    margin: 0 auto 0.9rem;
+    margin: 0;
     border: 4px solid var(--white);
     box-shadow: var(--shadow);
 }
@@ -652,22 +660,14 @@ main {
 }
 
 .practitioner-actions {
-    margin-top: 1.5rem;
+    margin-top: 0;
 }
 
 .practitioner-link {
-    display: inline-block;
-    padding: 0.7rem 1.2rem;
-    border-radius: var(--border-radius);
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.practitioner-link:hover {
-    background-color: var(--secondary-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
 }
 
 footer {
@@ -787,6 +787,10 @@ footer {
 
     .specialties {
         gap: 0.5rem;
+    }
+
+    .practitioner-header {
+        flex-direction: column;
     }
 
     .footer-content {
