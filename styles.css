@@ -546,8 +546,9 @@ main {
 }
 
 .practitioner-photo--wendy {
-    transform: scale(0.88);
-    transform-origin: center;
+    padding: 10px;
+    background-color: var(--white);
+    box-sizing: border-box;
 }
 
 .practitioner h3 {
