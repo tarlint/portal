@@ -530,6 +530,11 @@ main {
     box-shadow: var(--shadow);
 }
 
+.practitioner-photo--wendy {
+    transform: scale(0.88);
+    transform-origin: center;
+}
+
 .practitioner h3 {
     color: var(--primary-color);
     font-size: 1.8rem;
