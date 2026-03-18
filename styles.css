@@ -545,13 +545,6 @@ main {
     box-shadow: var(--shadow);
 }
 
-.practitioner-photo--wendy {
-    padding: 10px;
-    background: radial-gradient(circle at 35% 30%, #d9edf6 0%, #b7d4e3 55%, #8fb2c6 100%);
-    border-color: transparent;
-    box-sizing: border-box;
-}
-
 .practitioner h3 {
     color: var(--primary-color);
     font-size: 1.8rem;
