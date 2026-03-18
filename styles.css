@@ -651,6 +651,25 @@ main {
     font-weight: 500;
 }
 
+.practitioner-actions {
+    margin-top: 1.5rem;
+}
+
+.practitioner-link {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.practitioner-link:hover {
+    background-color: var(--secondary-color);
+}
+
 footer {
     background-color: var(--primary-color);
     color: var(--white);
