@@ -8,21 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Logo Loader Overlay -->
-    <div id="loader-overlay" class="loader-overlay">
-        <div class="loader-content">
-            <video id="logo-video" autoplay muted playsinline>
-                <source src="logo-animation.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="skip-hint">
-                <p>Click anywhere to skip</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main Content (initially hidden) -->
-    <div id="main-content" class="main-content hidden">
+    <div class="main-content">
     <main>
         <section class="hero">
             <div class="hero-content">
@@ -185,53 +171,5 @@
     </footer>
     </div>
 
-    <script>
-        // Logo loader functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const loaderOverlay = document.getElementById('loader-overlay');
-            const mainContent = document.getElementById('main-content');
-            const logoVideo = document.getElementById('logo-video');
-            let animationSkipped = false;
-
-            // Function to skip to main content
-            function skipToMainContent() {
-                if (animationSkipped) return; // Prevent multiple calls
-                animationSkipped = true;
-
-                // Show main content behind the door
-                mainContent.classList.remove('hidden');
-                mainContent.style.opacity = '1';
-                mainContent.style.display = 'block';
-
-                // Start door opening animation immediately
-                loaderOverlay.classList.add('door-opening');
-
-                // Remove loader after animation completes
-                setTimeout(function() {
-                    loaderOverlay.style.display = 'none';
-                }, 1500); // Match animation duration
-            }
-
-            // When video ends naturally, trigger door opening effect
-            logoVideo.addEventListener('ended', skipToMainContent);
-
-            // Click anywhere during animation to skip
-            loaderOverlay.addEventListener('click', skipToMainContent);
-
-            // ESC key to skip animation
-            document.addEventListener('keydown', function(event) {
-                if (event.key === 'Escape' && !animationSkipped) {
-                    skipToMainContent();
-                }
-            });
-
-            // Fallback: Show content after 5 seconds if video doesn't load
-            setTimeout(function() {
-                if (!animationSkipped && loaderOverlay.style.display !== 'none') {
-                    skipToMainContent();
-                }
-            }, 5000);
-        });
-    </script>
 </body>
 </html>
