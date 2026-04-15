@@ -244,13 +244,16 @@ main {
 .service-box h3 a,
 .service-box h3 a:visited,
 .service-box h3 a:active {
-    color: inherit;
+    color: var(--white) !important;
     text-decoration: none;
+    text-decoration-color: var(--white);
 }
 
 .service-box h3 a:hover,
 .service-box h3 a:focus-visible {
+    color: var(--white) !important;
     text-decoration: underline;
+    text-decoration-color: var(--white);
 }
 
 .service-box-prefix,
