@@ -207,6 +207,8 @@ main {
     gap: 2rem;
     max-width: 900px;
     width: 100%;
+    align-items: stretch;
+    grid-auto-rows: 1fr;
 }
 
 .service-box {
@@ -220,6 +222,8 @@ main {
     display: flex;
     flex-direction: column;
     height: 100%;
+    min-height: 42rem;
+    width: 100%;
 }
 
 .service-box:hover {
@@ -792,6 +796,7 @@ footer {
 
     .service-box {
         padding: 1.5rem;
+        min-height: auto;
     }
 
     .service-box h3 {
@@ -862,6 +867,7 @@ footer {
 
     .service-box {
         padding: 1rem;
+        min-height: auto;
     }
 
     .service-box h3 {
