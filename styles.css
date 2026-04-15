@@ -241,7 +241,9 @@ main {
     line-height: 1.15;
 }
 
-.service-box h3 a {
+.service-box h3 a,
+.service-box h3 a:visited,
+.service-box h3 a:active {
     color: inherit;
     text-decoration: none;
 }
