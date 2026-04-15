@@ -207,6 +207,7 @@ main {
     gap: 2rem;
     max-width: 900px;
     width: 100%;
+    align-items: start;
 }
 
 .service-box {
@@ -219,7 +220,6 @@ main {
     transition: var(--transition);
     display: flex;
     flex-direction: column;
-    height: 100%;
     width: 100%;
 }
 
@@ -279,7 +279,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: auto;
 }
 
 .contact-link {
