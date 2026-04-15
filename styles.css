@@ -241,19 +241,32 @@ main {
     line-height: 1.15;
 }
 
-.service-box h3 a,
-.service-box h3 a:visited,
-.service-box h3 a:active {
+.service-title-link,
+.service-title-link:visited,
+.service-title-link:active {
     color: var(--white) !important;
     text-decoration: none;
     text-decoration-color: var(--white);
+    display: inline-block;
+    border-radius: 12px;
+    padding: 0.2rem 0.5rem;
+    transition: color 0.25s ease, text-shadow 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
 }
 
-.service-box h3 a:hover,
-.service-box h3 a:focus-visible {
+.service-title-link:hover,
+.service-title-link:focus-visible {
     color: var(--white) !important;
     text-decoration: underline;
     text-decoration-color: var(--white);
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.9), 0 0 24px rgba(155, 202, 211, 0.85);
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.18);
+}
+
+.service-title-link:active {
+    color: var(--white) !important;
+    text-shadow: 0 0 16px rgba(255, 255, 255, 1), 0 0 28px rgba(155, 202, 211, 0.95);
+    box-shadow: 0 0 28px rgba(255, 255, 255, 0.24);
+    transform: scale(0.98);
 }
 
 .service-box-prefix,
