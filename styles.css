@@ -152,9 +152,13 @@ main {
     width: 100%;
     margin: 0 auto;
     padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .clinic-logo {
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
@@ -164,6 +168,7 @@ main {
     height: 360px;
     width: auto;
     display: block;
+    margin: 0 auto;
     -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1) 14%, rgba(0, 0, 0, 1) 86%, transparent 100%), linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1) 18%, rgba(0, 0, 0, 1) 82%, transparent 100%);
     -webkit-mask-composite: source-in;
     mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1) 14%, rgba(0, 0, 0, 1) 86%, transparent 100%), linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1) 18%, rgba(0, 0, 0, 1) 82%, transparent 100%);
