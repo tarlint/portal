@@ -1,22 +1,22 @@
 :root {
-    --primary-color: #0A2540;
-    --secondary-color: #5B9BA8;
-    --accent-color: #9BCAD3;
-    --text-primary: #0A2540;
-    --text-secondary: #5B9BA8;
-    --background-light: #D8E8EB;
+    --primary-color: #071c34;
+    --secondary-color: #2f69cf;
+    --accent-color: #62c7de;
+    --text-primary: #112845;
+    --text-secondary: #3e6f98;
+    --background-light: #e9f3fb;
     --white: #ffffff;
-    --border-light: #9BCAD3;
-    --shadow: 0 2px 10px rgba(10, 37, 64, 0.15);
+    --border-light: #bdd8ee;
+    --shadow: 0 12px 32px rgba(7, 28, 52, 0.14);
     --border-radius: 8px;
     --transition: all 0.3s ease;
-    --dark-navy: #0A2540;
-    --medium-teal: #5B9BA8;
-    --light-teal: #9BCAD3;
-    --very-light-blue: #D8E8EB;
-    --link-color: #2D728F;
-    --link-hover: #5B9BA8;
-    --link-underline: rgba(45, 114, 143, 0.25);
+    --dark-navy: #071c34;
+    --medium-teal: #2f69cf;
+    --light-teal: #62c7de;
+    --very-light-blue: #e9f3fb;
+    --link-color: #295aa8;
+    --link-hover: #62c7de;
+    --link-underline: rgba(47, 105, 207, 0.28);
 }
 
 * {
@@ -31,7 +31,7 @@ body {
     font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
-    background-color: var(--white);
+    background: linear-gradient(180deg, #f8fbff 0%, #edf5fc 100%);
     overflow-x: hidden;
 }
 
@@ -42,8 +42,9 @@ body {
 }
 
 header {
-    background-color: var(--white);
+    background-color: rgba(255, 255, 255, 0.92);
     box-shadow: var(--shadow);
+    backdrop-filter: blur(12px);
     position: fixed;
     top: 0;
     width: 100%;
@@ -134,7 +135,7 @@ main {
 }
 
 .hero {
-    background: linear-gradient(rgba(10, 37, 64, 0.8), rgba(91, 155, 168, 0.8)), url('clinic.png');
+    background: linear-gradient(rgba(7, 28, 52, 0.82), rgba(24, 72, 130, 0.68), rgba(98, 199, 222, 0.38)), url('clinic.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
