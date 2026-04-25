@@ -154,7 +154,7 @@ main {
 }
 
 .hero-logo {
-    height: 120px;
+    height: 240px;
     width: auto;
 }
 
@@ -765,7 +765,7 @@ footer {
     }
 
     .hero-logo {
-        height: 80px;
+        height: 160px;
     }
 
     .phone-number {
