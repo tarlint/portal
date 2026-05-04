@@ -162,7 +162,7 @@ main {
     width: 100%;
     max-width: 100%;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .hero-logo {
@@ -453,7 +453,7 @@ main {
 
 .hero-intro {
     width: 100%;
-    padding: 0 0 2rem;
+    padding: 0 0 3rem;
     background: transparent;
     border-bottom: 0;
 }
