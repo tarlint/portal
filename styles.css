@@ -451,6 +451,13 @@ main {
     border-bottom: 1px solid rgba(98, 199, 222, 0.22);
 }
 
+.hero-intro {
+    width: 100%;
+    padding: 0 0 2rem;
+    background: transparent;
+    border-bottom: 0;
+}
+
 .practice-intro p {
     max-width: 900px;
     margin: 0 auto;
@@ -459,6 +466,18 @@ main {
     line-height: 1.55;
     text-align: center;
     font-weight: 500;
+}
+
+.hero-intro p {
+    color: var(--white);
+    max-width: 880px;
+    padding: 1.15rem 1.35rem;
+    background: linear-gradient(180deg, rgba(17, 58, 112, 0.36), rgba(98, 199, 222, 0.18));
+    border: 1px solid rgba(189, 216, 238, 0.42);
+    border-radius: var(--border-radius);
+    box-shadow: 0 18px 40px rgba(7, 28, 52, 0.18);
+    backdrop-filter: blur(14px);
+    text-shadow: 0 2px 12px rgba(7, 28, 52, 0.32);
 }
 
 .services {
@@ -890,6 +909,14 @@ footer {
 
     .practice-intro p {
         font-size: 1.1rem;
+    }
+
+    .hero-intro {
+        padding-bottom: 1.5rem;
+    }
+
+    .hero-intro p {
+        padding: 1rem;
     }
 
     .services-grid,
