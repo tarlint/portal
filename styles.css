@@ -134,6 +134,49 @@ main {
     margin-top: 0;
 }
 
+.move-announcement {
+    background: #fff7d8;
+    border-bottom: 4px solid #f0b429;
+    color: var(--primary-color);
+    padding: 3.5rem 0 3rem;
+    text-align: center;
+}
+
+.move-announcement .container {
+    max-width: 980px;
+}
+
+.move-eyebrow {
+    color: #7c5600;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.move-announcement h1 {
+    color: var(--primary-color);
+    font-size: 4.25rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 1.4rem;
+}
+
+.move-announcement p {
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 auto 0.7rem;
+}
+
+.move-announcement a {
+    color: #0f58b8;
+    font-weight: 800;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
+}
+
 .hero {
     background: linear-gradient(rgba(7, 28, 52, 0.82), rgba(24, 72, 130, 0.68), rgba(98, 199, 222, 0.38)), url('clinic.png');
     background-size: cover;
@@ -847,6 +890,18 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .move-announcement {
+        padding: 2.6rem 0 2.2rem;
+    }
+
+    .move-announcement h1 {
+        font-size: 3rem;
+    }
+
+    .move-announcement p {
+        font-size: 1.15rem;
+    }
+
     .hero {
         padding: 2rem 0 4rem 0;
         min-height: 90vh;
@@ -968,6 +1023,18 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .move-eyebrow {
+        font-size: 0.82rem;
+    }
+
+    .move-announcement h1 {
+        font-size: 2.35rem;
+    }
+
+    .move-announcement p {
+        font-size: 1rem;
+    }
+
     .hero-brand {
         font-size: 1.8rem;
     }
