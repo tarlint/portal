@@ -1256,23 +1256,36 @@ main {
 }
 
 .hero {
-    min-height: auto;
-    padding: 4.25rem 0 3.5rem;
-    background: #fff8ef;
+    min-height: clamp(560px, 72vh, 780px);
+    padding: 5rem 0 4.5rem;
+    background:
+        linear-gradient(90deg, rgba(255, 248, 239, 0.96) 0%, rgba(255, 248, 239, 0.82) 28%, rgba(255, 248, 239, 0.14) 46%, rgba(255, 248, 239, 0) 62%),
+        url('hero-photo.png?v=20260616h');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
     color: #101820;
     text-align: left;
+    display: flex;
+    align-items: center;
 }
 
 .hero-grid {
     display: grid;
-    grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+    grid-template-columns: minmax(280px, 460px) minmax(0, 1fr);
     align-items: center;
-    gap: 3.25rem;
+    gap: 2rem;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding-left: clamp(36px, 7vw, 128px);
+    padding-right: 20px;
 }
 
 .hero-copy {
     max-width: 620px;
     text-align: center;
+    justify-self: start;
 }
 
 .hero-eyebrow {
@@ -1321,15 +1334,6 @@ footer .brand-wordmark {
     gap: 1rem;
     margin-top: 2.5rem;
     justify-content: center;
-}
-
-.hero-visual img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 1.18;
-    object-fit: cover;
-    object-position: left top;
-    border: 4px solid #3778bd;
 }
 
 .quick-contact {
@@ -1476,11 +1480,23 @@ footer {
     .hero {
         padding: 3.5rem 0;
         text-align: center;
+        min-height: 620px;
+        background:
+            linear-gradient(180deg, rgba(255, 248, 239, 0.94) 0%, rgba(255, 248, 239, 0.82) 42%, rgba(255, 248, 239, 0.2) 100%),
+            url('hero-photo.png?v=20260616h');
+        background-size: cover;
+        background-position: 62% center;
     }
 
     .hero-grid,
     .quick-contact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
     }
 
     .hero-copy {
