@@ -11,7 +11,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://newpathsforhealth.com/">
     <meta property="og:image" content="https://newpathsforhealth.com/logo-main-20260424.png">
-    <link rel="stylesheet" href="styles.css?v=20260616j">
+    <link rel="stylesheet" href="styles.css?v=20260616l">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script type="application/ld+json">
     {
@@ -58,7 +58,11 @@
                     <img src="logo-transparent.png?v=20260616f" alt="New Paths for Health" class="logo-image">
                     <span class="service-label"><span>Serving</span><span>Missoula, MT</span><span>and Online</span></span>
                 </a>
+                <button class="mobile-nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
                 <div class="nav-actions">
+                    <a href="https://newpathsforhealth.com/" class="nav-link">Home</a>
                     <div class="nav-dropdown">
                         <a href="#services" class="nav-link nav-dropdown-trigger">Services <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                         <div class="dropdown-menu" aria-label="Services submenu">
@@ -76,6 +80,8 @@
                         </div>
                     </div>
                     <a href="#reviews" class="nav-link">Reviews</a>
+                    <a href="https://newpathsforhealth.com/#referrals" class="nav-link">Referrals</a>
+                    <a href="https://newpathsforhealth.com/#resources" class="nav-link">Resources</a>
                     <a href="#footer-contact" class="nav-link">Contact</a>
                 </div>
             </div>
@@ -273,6 +279,32 @@
         document.addEventListener('scroll', updateCompactNav, { passive: true });
         window.addEventListener('touchmove', updateCompactNav, { passive: true });
         setInterval(updateCompactNav, 250);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuToggle = document.querySelector('.mobile-nav-toggle');
+            var dropdownTriggers = document.querySelectorAll('.nav-dropdown-trigger');
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    var isOpen = document.body.classList.toggle('nav-open');
+                    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                    var icon = menuToggle.querySelector('i');
+                    if (icon) {
+                        icon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
+                    }
+                });
+            }
+            dropdownTriggers.forEach(function(trigger) {
+                trigger.addEventListener('click', function(event) {
+                    if (window.matchMedia('(max-width: 860px)').matches) {
+                        event.preventDefault();
+                        var parent = trigger.closest('.nav-dropdown');
+                        if (parent) {
+                            parent.classList.toggle('is-open');
+                        }
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>

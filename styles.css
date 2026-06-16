@@ -19,6 +19,139 @@
     --link-underline: rgba(47, 105, 207, 0.28);
 }
 
+/* Phone menu override: keep links behind the 3-bar menu on vertical screens. */
+@media (max-width: 860px) {
+    .mobile-nav-toggle {
+        display: inline-flex;
+    }
+
+    .nav-container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        row-gap: 0.8rem;
+    }
+
+    .nav-actions {
+        grid-column: 1 / -1;
+        display: none;
+        width: 100%;
+        padding: 0.75rem 0 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    body.nav-open .nav-actions,
+    body.nav-open.nav-compact .nav-actions {
+        display: flex;
+    }
+
+    .nav-dropdown {
+        padding: 0;
+    }
+
+    .nav-link,
+    .nav-dropdown-trigger {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0.75rem 0.4rem;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        min-width: 0;
+        margin: 0 0 0.4rem;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .nav-dropdown.is-open .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu {
+        display: block;
+        transform: none;
+    }
+}
+
+.mobile-nav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--white);
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+@media (max-width: 860px) {
+    .mobile-nav-toggle {
+        display: inline-flex;
+    }
+
+    .nav-container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        row-gap: 0.8rem;
+    }
+
+    .logo-link {
+        min-width: 0;
+    }
+
+    .nav-actions {
+        grid-column: 1 / -1;
+        display: none;
+        width: 100%;
+        padding: 0.75rem 0 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    body.nav-open .nav-actions,
+    body.nav-open.nav-compact .nav-actions {
+        display: flex;
+    }
+
+    .nav-dropdown {
+        padding: 0;
+    }
+
+    .nav-link,
+    .nav-dropdown-trigger {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0.75rem 0.4rem;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        min-width: 0;
+        margin: 0 0 0.4rem;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .nav-dropdown.is-open .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu {
+        display: block;
+        transform: none;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -1140,7 +1273,7 @@ header::before {
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 1.65rem;
+    gap: 1.05rem;
 }
 
 .nav-link {
@@ -1534,5 +1667,63 @@ footer {
     .hero-actions .btn {
         width: 100%;
         text-align: center;
+    }
+}
+
+/* Phone menu override: keep links behind the 3-bar menu on vertical screens. */
+@media (max-width: 860px) {
+    .mobile-nav-toggle {
+        display: inline-flex;
+    }
+
+    .nav-container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        row-gap: 0.8rem;
+    }
+
+    .nav-actions {
+        grid-column: 1 / -1;
+        display: none;
+        width: 100%;
+        padding: 0.75rem 0 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    body.nav-open .nav-actions,
+    body.nav-open.nav-compact .nav-actions {
+        display: flex;
+    }
+
+    .nav-dropdown {
+        padding: 0;
+    }
+
+    .nav-link,
+    .nav-dropdown-trigger {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0.75rem 0.4rem;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        min-width: 0;
+        margin: 0 0 0.4rem;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .nav-dropdown.is-open .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu {
+        display: block;
+        transform: none;
     }
 }
