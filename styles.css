@@ -166,7 +166,7 @@ main {
 }
 
 .hero-logo {
-    width: min(92vw, 940px);
+    width: min(78vw, 600px);
     max-width: 100%;
     height: auto;
     display: block;
@@ -865,7 +865,7 @@ footer {
     }
 
     .hero-logo {
-        width: min(88vw, 620px);
+        width: min(74vw, 400px);
         max-width: 100%;
         height: auto;
     }
