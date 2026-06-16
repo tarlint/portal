@@ -1183,6 +1183,29 @@ header::before {
     color: var(--white);
 }
 
+body.nav-compact .nav-actions {
+    display: none;
+}
+
+body.nav-compact header::before {
+    max-height: 0;
+    padding: 0 20px;
+}
+
+body.nav-compact .nav-container {
+    min-height: auto;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+}
+
+body.nav-compact .logo-image {
+    height: 42px;
+}
+
+body.nav-compact .service-label {
+    display: none;
+}
+
 main {
     margin-top: 0;
 }
@@ -1358,26 +1381,9 @@ footer {
         padding: 1rem 20px 1.25rem;
     }
 
-    body.nav-compact header::before {
-        max-height: 0;
-        padding: 0 20px;
-        font-size: 0.86rem;
-    }
-
     body.nav-compact .nav-container {
-        padding: 0.35rem 12px;
-    }
-
-    body.nav-compact .nav-actions {
-        display: none;
-    }
-
-    body.nav-compact .logo-image {
-        height: 42px;
-    }
-
-    body.nav-compact .service-label {
-        display: none;
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
     .nav-actions {

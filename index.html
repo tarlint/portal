@@ -11,7 +11,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://newpathsforhealth.com/">
     <meta property="og:image" content="https://newpathsforhealth.com/logo-main-20260424.png">
-    <link rel="stylesheet" href="styles.css?v=20260616b">
+    <link rel="stylesheet" href="styles.css?v=20260616c">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script type="application/ld+json">
     {
@@ -264,10 +264,18 @@
 
     <script>
         function updateCompactNav() {
-            document.body.classList.toggle('nav-compact', window.scrollY > 40);
+            var y = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            if (y > 40) {
+                document.body.className = document.body.className.indexOf('nav-compact') === -1 ? (document.body.className + ' nav-compact').trim() : document.body.className;
+            } else {
+                document.body.className = document.body.className.replace(/\bnav-compact\b/g, '').trim();
+            }
         }
         updateCompactNav();
+        window.addEventListener('scroll', updateCompactNav, { passive: true });
         document.addEventListener('scroll', updateCompactNav, { passive: true });
+        window.addEventListener('touchmove', updateCompactNav, { passive: true });
+        setInterval(updateCompactNav, 250);
     </script>
 </body>
 </html>
