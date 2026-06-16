@@ -262,5 +262,12 @@
     </footer>
     </div>
 
+    <script>
+        function updateCompactNav() {
+            document.body.classList.toggle('nav-compact', window.scrollY > 40);
+        }
+        updateCompactNav();
+        document.addEventListener('scroll', updateCompactNav, { passive: true });
+    </script>
 </body>
 </html>

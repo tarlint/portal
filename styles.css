@@ -1047,6 +1047,8 @@ header {
     border-bottom: 0;
     box-shadow: none;
     position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header::before {
@@ -1057,6 +1059,9 @@ header::before {
     padding: 0.75rem 20px;
     color: var(--white);
     font-weight: 600;
+    max-height: 48px;
+    overflow: hidden;
+    transition: padding 0.2s ease, font-size 0.2s ease, max-height 0.2s ease;
 }
 
 .main-nav {
@@ -1066,6 +1071,7 @@ header::before {
 
 .nav-container {
     min-height: 96px;
+    transition: min-height 0.2s ease, padding 0.2s ease;
 }
 
 .logo-image {
@@ -1073,6 +1079,7 @@ header::before {
     filter: none;
     -webkit-mask-image: none;
     mask-image: none;
+    transition: height 0.2s ease;
 }
 
 .logo-link:hover {
@@ -1166,6 +1173,7 @@ header::before {
     text-align: center;
     text-decoration: none;
     font-weight: 800;
+    transition: padding 0.2s ease, min-width 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
 .nav-cta:hover,
@@ -1348,6 +1356,28 @@ footer {
         min-height: auto;
         flex-direction: column;
         padding: 1rem 20px 1.25rem;
+    }
+
+    body.nav-compact header::before {
+        max-height: 0;
+        padding: 0 20px;
+        font-size: 0.86rem;
+    }
+
+    body.nav-compact .nav-container {
+        padding: 0.35rem 12px;
+    }
+
+    body.nav-compact .nav-actions {
+        display: none;
+    }
+
+    body.nav-compact .logo-image {
+        height: 42px;
+    }
+
+    body.nav-compact .service-label {
+        display: none;
     }
 
     .nav-actions {
