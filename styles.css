@@ -1431,6 +1431,7 @@ main {
 
 .hero {
     height: clamp(496px, 57.6vh, 624px);
+    min-height: 0;
     padding: 5rem 0 4.5rem;
     background:
         linear-gradient(90deg, rgba(255, 248, 239, 0.96) 0%, rgba(255, 248, 239, 0.82) 28%, rgba(255, 248, 239, 0.14) 46%, rgba(255, 248, 239, 0) 62%),
@@ -1669,6 +1670,7 @@ footer {
         padding: 3.5rem 0;
         text-align: center;
         height: clamp(496px, 57.6vh, 624px);
+        min-height: 0;
         background:
             linear-gradient(180deg, rgba(255, 248, 239, 0.94) 0%, rgba(255, 248, 239, 0.82) 42%, rgba(255, 248, 239, 0.2) 100%),
             url('hero-photo.png?v=20260616h');
