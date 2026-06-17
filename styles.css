@@ -1454,6 +1454,20 @@ footer .brand-wordmark {
     margin-bottom: 1.4rem;
 }
 
+.hero-title-main,
+.hero-title-small {
+    display: block;
+}
+
+.hero-title-main {
+    font-size: 1em;
+}
+
+.hero-title-small {
+    font-size: 0.5em;
+    line-height: 1.16;
+}
+
 .hero-lede {
     color: #1c2730;
     font-size: 1.3rem;
