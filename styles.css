@@ -949,8 +949,8 @@ footer {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
 }
 
 .footer-section h3,
@@ -1096,7 +1096,7 @@ footer {
 
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        gap: 1.25rem;
     }
 }
 
