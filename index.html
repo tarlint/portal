@@ -268,9 +268,10 @@
     <script>
         function updateCompactNav() {
             var y = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
-            if (y > 90) {
+            var isCompact = document.body.classList.contains('nav-compact');
+            if (!isCompact && y > 160) {
                 document.body.classList.add('nav-compact');
-            } else if (y < 18) {
+            } else if (isCompact && y < 6) {
                 document.body.classList.remove('nav-compact');
             }
         }
