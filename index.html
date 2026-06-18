@@ -11,7 +11,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://newpathsforhealth.com/">
     <meta property="og:image" content="https://newpathsforhealth.com/logo-main-20260424.png">
-    <link rel="stylesheet" href="styles.css?v=20260617c">
+    <link rel="stylesheet" href="styles.css?v=20260618a">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script type="application/ld+json">
     {
@@ -63,14 +63,8 @@
                 </button>
                 <div class="nav-actions">
                     <a href="https://newpathsforhealth.com/" class="nav-link">Home</a>
-                    <div class="nav-dropdown">
-                        <a href="#services" class="nav-link nav-dropdown-trigger">Services <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
-                        <div class="dropdown-menu" aria-label="Services submenu">
-                            <a href="#services">Services Overview</a>
-                            <a href="https://neurofeedback.newpathsforhealth.com/">Neurofeedback Training</a>
-                            <a href="https://speech.newpathsforhealth.com/">Speech Therapy</a>
-                        </div>
-                    </div>
+                    <a href="https://neurofeedback.newpathsforhealth.com/" class="nav-link">Neurofeedback</a>
+                    <a href="https://speech.newpathsforhealth.com/" class="nav-link">Speech Therapy</a>
                     <div class="nav-dropdown">
                         <a href="#team" class="nav-link nav-dropdown-trigger">Practitioners <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                         <div class="dropdown-menu" aria-label="Practitioners submenu">
@@ -83,6 +77,7 @@
                     <a href="https://newpathsforhealth.com/#referrals" class="nav-link">Referrals</a>
                     <a href="https://newpathsforhealth.com/#resources" class="nav-link">Resources</a>
                     <a href="#footer-contact" class="nav-link">Contact</a>
+                    <a href="#inquiry" class="nav-link">Inquiry</a>
                 </div>
             </div>
         </nav>
@@ -234,6 +229,44 @@
             </div>
         </section>
 
+        <section id="inquiry" class="inquiry-section">
+            <div class="container inquiry-layout">
+                <div class="inquiry-intro">
+                    <p class="inquiry-eyebrow">Get In Touch</p>
+                    <h2>Send an Inquiry</h2>
+                    <p>Tell us how we can help and the New Paths for Health team will follow up with you.</p>
+                    <p class="inquiry-privacy">Please do not include private medical information in this form.</p>
+                </div>
+                <form class="inquiry-form" action="https://formsubmit.co/owner@newpathsforhealth.com" method="POST">
+                    <input type="hidden" name="_subject" value="New website inquiry">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://newpathsforhealth.com/?inquiry=sent#inquiry">
+                    <input class="inquiry-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off">
+                    <div class="form-field">
+                        <label for="inquiry-name">Name</label>
+                        <input id="inquiry-name" name="name" type="text" autocomplete="name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="inquiry-phone">Phone number</label>
+                        <input id="inquiry-phone" name="phone" type="tel" autocomplete="tel" required>
+                    </div>
+                    <div class="form-field form-field-wide">
+                        <label for="inquiry-email">Email</label>
+                        <input id="inquiry-email" name="email" type="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-field form-field-wide">
+                        <label for="inquiry-question">Question</label>
+                        <textarea id="inquiry-question" name="question" rows="6" required></textarea>
+                    </div>
+                    <div class="form-submit form-field-wide">
+                        <button class="btn btn-primary" type="submit">Send Inquiry</button>
+                        <p class="inquiry-success" role="status" hidden>Thank you. Your inquiry has been sent.</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
     </main>
 
     <footer>
@@ -291,7 +324,7 @@
             }
             dropdownTriggers.forEach(function(trigger) {
                 trigger.addEventListener('click', function(event) {
-                    if (window.matchMedia('(max-width: 860px)').matches) {
+                    if (window.matchMedia('(max-width: 1180px)').matches) {
                         event.preventDefault();
                         var parent = trigger.closest('.nav-dropdown');
                         if (parent) {
@@ -300,6 +333,11 @@
                     }
                 });
             });
+
+            var inquirySuccess = document.querySelector('.inquiry-success');
+            if (inquirySuccess && new URLSearchParams(window.location.search).get('inquiry') === 'sent') {
+                inquirySuccess.hidden = false;
+            }
         });
     </script>
 </body>
