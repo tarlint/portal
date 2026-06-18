@@ -2051,3 +2051,101 @@ body.nav-compact .call-us-bar {
         text-align: center;
     }
 }
+
+.practice-overview {
+    padding: 4.75rem 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e1ddd7;
+}
+
+.practice-overview-header {
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.practice-overview-eyebrow {
+    margin-bottom: 0.55rem;
+    color: #8f4f31;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.practice-overview h2 {
+    margin-bottom: 1rem;
+    color: #101820;
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    letter-spacing: 0;
+}
+
+.practice-overview-lede,
+.practice-overview-grid p,
+.practice-overview-close {
+    color: #46515a;
+    line-height: 1.7;
+}
+
+.practice-overview-lede {
+    font-size: 1.15rem;
+}
+
+.practice-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 1000px;
+    margin: 2.75rem auto 0;
+    border-top: 1px solid #e1ddd7;
+    border-bottom: 1px solid #e1ddd7;
+}
+
+.practice-overview-grid > div {
+    min-width: 0;
+    padding: 2rem clamp(1.5rem, 4vw, 3rem);
+}
+
+.practice-overview-grid > div + div {
+    border-left: 1px solid #e1ddd7;
+}
+
+.practice-overview-grid h3 {
+    margin-bottom: 0.65rem;
+    color: #101820;
+    font-size: 1.35rem;
+    letter-spacing: 0;
+}
+
+.practice-overview-grid h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.practice-overview-grid h3 a:hover,
+.practice-overview-grid h3 a:focus-visible {
+    color: #8f4f31;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.practice-overview-close {
+    max-width: 860px;
+    margin: 2rem auto 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    .practice-overview {
+        padding: 3.5rem 0;
+    }
+
+    .practice-overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-overview-grid > div + div {
+        border-top: 1px solid #e1ddd7;
+        border-left: 0;
+    }
+}
